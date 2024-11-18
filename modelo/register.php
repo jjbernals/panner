@@ -7,7 +7,7 @@ class Register extends Conexion
 
     public function conInsert($usuario, $correo, $contra)
     {
-        $sql = 'INSERT INTO LOGINDB (nombre, email, contraseña) VALUES 
+        $sql = 'INSERT INTO LOGINDB (nombre, email, PASSWORD) VALUES 
            ("' . $usuario . '","' . $correo . '", "' . $contra . '")';
         $consulta = $this->conectar()->query($sql);
         return $consulta;
